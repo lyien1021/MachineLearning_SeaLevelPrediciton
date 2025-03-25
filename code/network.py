@@ -5,12 +5,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 
-file_src = "C:/Users/ann90/OneDrive/桌面/作業/python資料分析/環境時空與資料視覺化/final project/"
+file_src = "C:/Users/decar/Downloads/MachineLearning_SeaLevelPrediciton-main/MachineLearning_SeaLevelPrediciton-main/data/"
 file_name = "keelung_data.xlsx"
 df = pd.read_excel(file_src + file_name)
 
 #建立x矩陣
-X = np.array([df['海平面氣壓(hPa)'],df['最大陣風(m/s)'],df['流量']])
+X = np.array([df['海平面氣壓(hPa)'],df['風速(m/s)'],df['降水量(mm)']])
 X = X.T.tolist()
 
 y = np.array([df['highesthighwaterlevel']])
